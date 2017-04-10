@@ -9,6 +9,12 @@ public class OcbTrigger
     public static void main( String[] args )
     {
         System.out.println( "We r in OCB Trigger!" );
-        System.out.println( "GitHub code change " );
-    }
+        
+            //Here you should take storenumber as input 
+         	
+         	// Business Object
+         	
+         	// Send an email using Java Mail ApI
+         }
+    
 }
