@@ -25,7 +25,7 @@ public class OcbTrigger
         
 
     		try {
-    			ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+    			ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("springs.xml");
 
     			OrderCreationBatchBO orderBo = (OrderCreationBatchBO) context.getBean("ocbBO"); // bean id = "ocbBO"
     			List<SkuDTO> skus = orderBo.fetchSkuList("501");
