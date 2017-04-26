@@ -1,5 +1,6 @@
 package com.smartbuy.ocb;
-
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * OCB Trigger...!
  *
@@ -11,6 +12,7 @@ import java.util.List;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.rajani.springs.FirstSpring;
 import com.smartbuy.ocb.bo.OrderCreationBatchBO;
 import com.smartbuy.ocb.dto.OrderDTO;
 import com.smartbuy.ocb.dto.SkuDTO;
@@ -25,7 +27,9 @@ public class OcbTrigger
         
 
     		try {
-    			ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("springs.xml");
+    			//ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("springs.xml");
+    			ApplicationContext context = new ClassPathXmlApplicationContext("springs.xml");
+    		      
 
     			OrderCreationBatchBO orderBo = (OrderCreationBatchBO) context.getBean("ocbBO"); // bean id = "ocbBO"
     			List<SkuDTO> skus = orderBo.fetchSkuList("501");
